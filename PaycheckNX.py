@@ -14,33 +14,33 @@ print(r"                    \______/                                            
 fin = ""
 while fin != "si":
 
-
+# En las siguientes 4 lineas de codigo se recogen los datos del usuario
+    
     nombre = input ("Bienbenido, por favor, identifiquese solo con su nombre ")
 
-    valor = int(input("Bienvenido, "+ nombre +", Por favor, introduzca el valor de una hora de trabajo "))
+    valor = int(input("Bienvenido, "+ nombre +", Por favor, introduzca el valor de una semana de trabajo "))
 
     hora = int(input("Por favor, introduzca la cantidad de horas trabajadas en una semana "))
 
     tarea = input("¿De que desea saber el valor?")
 
+# En las siguientes lineas de codigo se calculan los diferentes valores en función de la tarea que le pide al usuario al programa
+    
+    if tarea == "Hora" or tarea == "hora" or tarea == "Una hora" or tarea == "una hora":
 
-    if tarea == "semana" or tarea == "Semana" or tarea == "semanal" or tarea == "Semanal":
-
-        semana = valor * hora
-        print ("Su valor semanal es de " + str(semana) + " Euros")
+        valorhora = valor / hora
+        print ("Su valor por hora es de " + str(valorhora) + " Euros")
 
 
     elif tarea == "Mes" or tarea == "mes" or tarea == "Mensual" or tarea == "mensual":
     
-        mes = hora * 4
-        valormes = valor * mes
+        valormes = valor * 4
         print ("Su valor mensual es de " + str(valormes) + " Euros")
 
 
     elif tarea == "Año" or tarea == "año" or tarea == "Anual" or tarea == "anual":
 
-        anual = hora * 48
-        valoranual = valor * anual
+        valoranual = valor * 48
         print ("Su valor anual es de " + str(valoranual) + " Euros")
 
     else: 
